@@ -30,3 +30,10 @@ To build follow the steps below:
    ```
    make V=s -j$(nproc)
    ```
+For optimal performance append the following options to your /etc/config/wireless to your 5GHz radio (Line should start with config wifi-device 'radio1') [Source](https://forum.openwrt.org/t/solved-802-11ax-worse-than-802-11ac-with-mt76-driver/126466/111)
+```
+option beacon_int '101'
+option cell_density '0'
+option he_bss_color '8'
+option he_su_beamformee '1'
+```
